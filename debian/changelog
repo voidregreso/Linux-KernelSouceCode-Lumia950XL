@@ -1,0 +1,5 @@
+linux-4.18.6-lumia-950xl-uefi (4.18.6-lumia-950xl-uefi-4) stretch; urgency=low
+
+  * Custom built Linux kernel.
+
+ -- imbushuo <imbushuo@lumia-bldag-bl1.dorm.network.littlemoenew.com>  Thu, 01 Nov 2018 03:05:05 -0400

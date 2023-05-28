@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+build:
+	$(MAKE) KERNELRELEASE=4.18.6-lumia-950xl-uefi CROSS_COMPILE=/opt/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu- ARCH=arm64 KBUILD_SRC= 950xl_defconfig
+	$(MAKE) KERNELRELEASE=4.18.6-lumia-950xl-uefi CROSS_COMPILE=/opt/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu- ARCH=arm64 KBUILD_SRC=
+
+binary-arch:
+	$(MAKE) KERNELRELEASE=4.18.6-lumia-950xl-uefi CROSS_COMPILE=/opt/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu- ARCH=arm64 KBUILD_SRC= intdeb-pkg
+
+clean:
+	rm -rf debian/*tmp debian/files
+	$(MAKE) clean
+
+binary: binary-arch
